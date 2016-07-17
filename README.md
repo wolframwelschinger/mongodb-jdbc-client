@@ -11,7 +11,7 @@ If you want to contact the author please email to wolfram.welschinger@web.de.
 Download from github:
 =====================
 
-mkdir mongodb-jdbc-client
-cd mongodb-jdbc-client
-git clone https://github.com/wolframwelschinger/mongodb-jdbc-client
+mkdir mongodb-jdbc-client <br />
+cd mongodb-jdbc-client <br />
+git clone https://github.com/wolframwelschinger/mongodb-jdbc-client <br />
 
