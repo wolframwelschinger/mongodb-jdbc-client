@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -28,6 +31,8 @@ public class MongoDBJdbcClient {
 	DB db = null;
 	DBCollection coll = null;
 	
+	private Logger logger = (Logger) LogManager.getLogger(this.getClass().getName());;
+	
 	public MongoDBJdbcClient(){
 		super();
 		mongoClient = new MongoClient(MONGO_DB_HOST, MONGO_DB_PORT);
@@ -35,9 +40,9 @@ public class MongoDBJdbcClient {
 		
 		if (!db.collectionExists(COLLECTION_NAME)){
 			this.coll = db.createCollection(COLLECTION_NAME, null);
-			System.out.println("Collection " + COLLECTION_NAME + " wurde angelegt.");
+			logger.debug("Collection " + COLLECTION_NAME + " wurde angelegt.");
 		} else {
-			System.out.println("Collection " + COLLECTION_NAME + " existiert bereits.");
+			logger.debug("Collection " + COLLECTION_NAME + " existiert bereits.");
 			coll = db.getCollection(COLLECTION_NAME);
 		}
 	}
@@ -50,24 +55,24 @@ public class MongoDBJdbcClient {
 				.append("likes", 100).append("url", "http://www.tutorialspoint.com/mongodb/")
 				.append("by", "tutorials point");
 		coll.insert(doc);
-		System.out.println("Document inserted successfully");		
+		logger.debug("Document inserted successfully");		
 	}
 	
 	/**
 	 * Finds all documents of a specified collection
 	 */
 	public void findAllDocuments(){
-		System.out.println("Find all documents...");
+		logger.debug("Find all documents...");
 		DBCursor cursor = this.coll.find();
 		if (null != cursor){
 			int i = 1;
 			while (cursor.hasNext()) {
-				System.out.println("Document " + i + ":");
-				System.out.println(cursor.next());
+				logger.debug("Document " + i + ":");
+				logger.debug(cursor.next());
 				i++;
 			}				
 		} else {
-			System.out.println("No documents found!");
+			logger.debug("No documents found!");
 		}
 	
 	}
@@ -83,13 +88,13 @@ public class MongoDBJdbcClient {
 		List<BasicDBObject> obj = new ArrayList<BasicDBObject>();
 		
 		for (Object key : pattern.keySet()){
-			System.out.println("Criteria: Key=" + key + ", value=" + pattern.get(key));
+			logger.debug("Criteria: Key=" + key + ", value=" + pattern.get(key));
 			obj.add(new BasicDBObject( (String)key, pattern.get(key) ));
 		}
 		
 		andQuery.put("$and", obj);		
 		
-		System.out.println("andQuery: " + obj);
+		logger.debug("andQuery: " + obj);
 		
 		DBCursor cursor = db.getCollection("wwtest").find(andQuery); //coll.find(andQuery);
 		while (cursor.hasNext()) {
@@ -98,7 +103,7 @@ public class MongoDBJdbcClient {
 			for (String key : currentObj.keySet()){
 				sb.append("    " + key + " = " + currentObj.get(key) + "\n");
 			}
-			System.out.println("-- And query:\n" + sb.toString());
+			logger.debug("-- document found:\n" + sb.toString());
 			sb = null;
 		}		
 		
@@ -112,12 +117,12 @@ public class MongoDBJdbcClient {
 	public boolean addNewDocument(HashMap pattern){
 		BasicDBObject newDoc = new BasicDBObject();
 		for (Object key : pattern.keySet()){
-			System.out.println("Criteria: Key=" + key + ", value=" + pattern.get(key));
+			logger.debug("Criteria: Key=" + key + ", value=" + pattern.get(key));
 			newDoc.append( (String)key, pattern.get(key) );
 		}
 		
 		WriteResult result = this.coll.insert(newDoc);
-		System.out.println("New document inserted successfully: " 
+		logger.debug("New document inserted successfully: " 
 				+ "wasAcknowledged=" + result.wasAcknowledged()
 				+ ", isUpdateOfExisting=" + result.isUpdateOfExisting()
 				+ ", getUpsertedId=" + result.getUpsertedId()
@@ -133,7 +138,7 @@ public class MongoDBJdbcClient {
 	 */
 	public boolean removeDocument(BasicDBObject documentToRemove){
 		WriteResult result = coll.remove(documentToRemove);
-		System.out.println(result.wasAcknowledged()? "Document was removed." : "Document couldn't be removed.");
+		logger.debug(result.wasAcknowledged()? "Document was removed." : "Document couldn't be removed.");
 		return result.wasAcknowledged();
 	}
 	
@@ -145,7 +150,7 @@ public class MongoDBJdbcClient {
 	 */
 	public boolean updateDocument(BasicDBObject documentToUpdate, BasicDBObject update){
 		WriteResult result = coll.update(documentToUpdate, update);
-		System.out.println(result.wasAcknowledged()? "Document was updated." : "Document couldn't be updated.");
+		logger.debug(result.wasAcknowledged()? "Document was updated." : "Document couldn't be updated.");
 		return result.wasAcknowledged();
 	}
 	
@@ -154,6 +159,7 @@ public class MongoDBJdbcClient {
 	 */
 	public void closeConnection(){
 		this.mongoClient.close();
+		logger.debug("Connection closed.");
 	}
 	
 	public static void main(String args[]) {

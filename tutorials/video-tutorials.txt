@@ -1,0 +1,12 @@
+Versionskontrolle mit Git (Teil 1/2), Einführung:
+
+https://www.youtube.com/watch?v=s3-nKliIzZA
+
+https://www.youtube.com/watch?v=1BHFCk2aZKo Stop by 08:55
+
+
+Tools:
+
+Smargit
+Tower
+
