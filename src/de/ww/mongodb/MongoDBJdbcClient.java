@@ -81,9 +81,11 @@ public class MongoDBJdbcClient {
 	 * Finds documents by search pattern 
 	 * @see http://www.mkyong.com/mongodb/java-mongodb-query-document/
 	 * @param pattern HashMap<String, Object> of criterias
+	 * @return List<DBObject> containing the fetched documents 
 	 */
-	public void findDocumentByAndQuery(HashMap pattern){
+	public ArrayList<DBObject> findDocumentByAndQuery(HashMap pattern){
 		
+		ArrayList<DBObject> documentList = new ArrayList<DBObject>();
 		BasicDBObject andQuery = new BasicDBObject();
 		List<BasicDBObject> obj = new ArrayList<BasicDBObject>();
 		
@@ -104,8 +106,11 @@ public class MongoDBJdbcClient {
 				sb.append("    " + key + " = " + currentObj.get(key) + "\n");
 			}
 			logger.debug("-- document found:\n" + sb.toString());
+			documentList.add(currentObj);
 			sb = null;
 		}		
+		
+		return documentList;
 		
 	}
 	
@@ -177,7 +182,10 @@ public class MongoDBJdbcClient {
 			pattern.put("likes", Integer.valueOf(100));
 			pattern.put("title", "MongoDB");
 			pattern.put("by", "tutorials point");
-			client.findDocumentByAndQuery(pattern);
+			ArrayList<DBObject> documentList = client.findDocumentByAndQuery(pattern);
+			for (DBObject doc : documentList){
+				System.out.println(">>> Fetched document: " + doc);
+			}
 			
 			//Insert a new document
 			HashMap<String, Object> newDoc = new HashMap<String, Object>();

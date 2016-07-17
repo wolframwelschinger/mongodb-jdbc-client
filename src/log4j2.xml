@@ -19,7 +19,7 @@
     </Logger>
     -->
     <!-- --> 
-    <Root level="debug">
+    <Root level="DEBUG">
       <AppenderRef ref="STDOUT"/>
       <AppenderRef ref="FILE_APPENDER"/>
     </Root>
