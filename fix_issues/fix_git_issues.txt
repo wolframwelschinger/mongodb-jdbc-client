@@ -1,0 +1,3 @@
+Issue: fatal: remote origin already exists.
+
+http://stackoverflow.com/questions/1221840/remote-origin-already-exists-on-git-push-to-a-new-repository
