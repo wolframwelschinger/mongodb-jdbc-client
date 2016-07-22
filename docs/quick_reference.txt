@@ -1,0 +1,42 @@
+-- Mongo Shell starten
+$MONGODB_HOME/bin/mongo
+
+-- DBs auflisten
+> show dbs;
+dbdogs  0.000GB
+dbtext  0.000GB
+dbtxt   0.000GB
+foo     0.000GB
+local   0.000GB
+wwtest  0.000GB
+> 
+
+-- DB selektieren
+> use wwtest
+switched to db wwtest
+> 
+
+-- Collections anzeigen
+> show collections;
+mycol
+wwtest
+> 
+
+-- Alle Docs einer Collection anzeigen
+> db.wwtest.find()
+{ "_id" : ObjectId("56b4ca2c125d92371c1af078"), "title" : "MongoDB", "description" : "database", "likes" : 100, "url" : "http://www.tutorialspoint.com/mongodb/", "by" : "tutorials point" }
+{ "_id" : ObjectId("578a7fa50497811bd0b3f2dd"), "hello" : "MongoDB" }
+{ "_id" : ObjectId("578a857c6068070aa0824335"), "title" : "MongoDB", "description" : "database", "likes" : 100, "url" : "http://www.tutorialspoint.com/mongodb/", "by" : "tutorials point" }
+{ "_id" : ObjectId("578b18443f8e85184741f5c2"), "title" : "MongoDB", "description" : "database", "likes" : 100, "url" : "http://www.tutorialspoint.com/mongodb/", "by" : "tutorials point" }
+> 
+
+-- Ein Document einfuegen
+> db.wwtest.insert({name:'Welschinger',vorname:'Wolfram'});
+WriteResult({ "nInserted" : 1 })
+
+> db.wwtest.find({name:'Welschinger',vorname:'Wolfram'});
+{ "_id" : ObjectId("578cb5747d1b7668893dda2f"), "name" : "Welschinger", "vorname" : "Wolfram" }
+> 
+
+
+> 

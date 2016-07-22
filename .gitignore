@@ -1,0 +1,5 @@
+# File to be ignored by git
+bin/**
+*.class
+*.swp
+

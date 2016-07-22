@@ -1,0 +1,5 @@
+-- Einen Datensatz anhand der Object-ID finden.
+
+> db.wwtest.find({"_id" : ObjectId("56b4ca2c125d92371c1af078")});
+{ "_id" : ObjectId("56b4ca2c125d92371c1af078"), "title" : "MongoDB", "description" : "database", "likes" : 100, "url" : "http://www.tutorialspoint.com/mongodb/", "by" : "tutorials point" }
+> 

@@ -1,0 +1,116 @@
+2016-07-22 15:52:16,601 DEBUG [main] mongodb.MongoDBJdbcClient - Collection mycol existiert bereits.
+2016-07-22 15:52:16,612 DEBUG [main] mongodb.MongoDBJdbcClient - Find all documents...
+2016-07-22 15:52:16,634 DEBUG [main] mongodb.MongoDBJdbcClient - Document 1:
+2016-07-22 15:52:16,636 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "56b4ca2b125d92371c1af077"} , "title" : "MongoDB" , "description" : "database" , "likes" : 100 , "url" : "http://www.tutorialspoint.com/mongodb/" , "by" : "tutorials point"}
+2016-07-22 15:52:16,648 DEBUG [main] mongodb.MongoDBJdbcClient - Document 2:
+2016-07-22 15:52:16,649 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578a857c6068070aa0824334"} , "title" : "MongoDB" , "description" : "database" , "likes" : 100 , "url" : "http://www.tutorialspoint.com/mongodb/" , "by" : "tutorials point"}
+2016-07-22 15:52:16,650 DEBUG [main] mongodb.MongoDBJdbcClient - Document 3:
+2016-07-22 15:52:16,651 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b18443f8e85184741f5c1"} , "title" : "MongoDB" , "description" : "database" , "likes" : 100 , "url" : "http://www.tutorialspoint.com/mongodb/" , "by" : "tutorials point"}
+2016-07-22 15:52:16,652 DEBUG [main] mongodb.MongoDBJdbcClient - Document 4:
+2016-07-22 15:52:16,652 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b6e9a3f8e852b6bab15fb"} , "version" : "1.0.1"}
+2016-07-22 15:52:16,654 DEBUG [main] mongodb.MongoDBJdbcClient - Document 5:
+2016-07-22 15:52:16,654 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b6ec63f8e852b7c4a7c18"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,655 DEBUG [main] mongodb.MongoDBJdbcClient - Document 6:
+2016-07-22 15:52:16,655 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b7c813f8e852e840f9bd4"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,656 DEBUG [main] mongodb.MongoDBJdbcClient - Document 7:
+2016-07-22 15:52:16,656 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b7da03f8e852f00bd783b"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,656 DEBUG [main] mongodb.MongoDBJdbcClient - Document 8:
+2016-07-22 15:52:16,657 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bade53f8e853d75484263"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,657 DEBUG [main] mongodb.MongoDBJdbcClient - Document 9:
+2016-07-22 15:52:16,657 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bae133f8e853d891acdd7"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,658 DEBUG [main] mongodb.MongoDBJdbcClient - Document 10:
+2016-07-22 15:52:16,658 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578baeb73f8e853dce70d088"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,659 DEBUG [main] mongodb.MongoDBJdbcClient - Document 11:
+2016-07-22 15:52:16,659 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578baf433f8e853e0ad96610"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,660 DEBUG [main] mongodb.MongoDBJdbcClient - Document 12:
+2016-07-22 15:52:16,660 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb0543f8e853e8fbb5385"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,662 DEBUG [main] mongodb.MongoDBJdbcClient - Document 13:
+2016-07-22 15:52:16,664 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb1693f8e853f056eb11f"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,665 DEBUG [main] mongodb.MongoDBJdbcClient - Document 14:
+2016-07-22 15:52:16,665 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb2293f8e853f534b1761"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,666 DEBUG [main] mongodb.MongoDBJdbcClient - Document 15:
+2016-07-22 15:52:16,666 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb8363f8e8542f0f2f6db"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,666 DEBUG [main] mongodb.MongoDBJdbcClient - Document 16:
+2016-07-22 15:52:16,666 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb8713f8e85430963e0f1"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,667 DEBUG [main] mongodb.MongoDBJdbcClient - Document 17:
+2016-07-22 15:52:16,667 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578cb33a3f8e855d3aba94c8"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,667 DEBUG [main] mongodb.MongoDBJdbcClient - Document 18:
+2016-07-22 15:52:16,668 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "579223b2a30cb208ca861d5a"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,669 DEBUG [main] mongodb.MongoDBJdbcClient - Document 19:
+2016-07-22 15:52:16,670 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "57922455a30cb208dc56dd84"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,670 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=by, value=tutorials point
+2016-07-22 15:52:16,671 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=title, value=MongoDB
+2016-07-22 15:52:16,671 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=likes, value=100
+2016-07-22 15:52:16,671 DEBUG [main] mongodb.MongoDBJdbcClient - andQuery: [{ "by" : "tutorials point"}, { "title" : "MongoDB"}, { "likes" : 100}]
+2016-07-22 15:52:16,675 DEBUG [main] mongodb.MongoDBJdbcClient - -- document found:
+    _id = 56b4ca2c125d92371c1af078
+    title = MongoDB
+    description = database
+    likes = 100
+    url = http://www.tutorialspoint.com/mongodb/
+    by = tutorials point
+
+2016-07-22 15:52:16,676 DEBUG [main] mongodb.MongoDBJdbcClient - -- document found:
+    _id = 578a857c6068070aa0824335
+    title = MongoDB
+    description = database
+    likes = 100
+    url = http://www.tutorialspoint.com/mongodb/
+    by = tutorials point
+
+2016-07-22 15:52:16,676 DEBUG [main] mongodb.MongoDBJdbcClient - -- document found:
+    _id = 578b18443f8e85184741f5c2
+    title = MongoDB
+    description = database
+    likes = 100
+    url = http://www.tutorialspoint.com/mongodb/
+    by = tutorials point
+
+2016-07-22 15:52:16,679 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=by, value=Wolfram Welschinger
+2016-07-22 15:52:16,680 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=description, value=Java application
+2016-07-22 15:52:16,680 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=title, value=Wolfram's JDBC Client
+2016-07-22 15:52:16,680 DEBUG [main] mongodb.MongoDBJdbcClient - Criteria: Key=version, value=1.1
+2016-07-22 15:52:16,698 INFO  [main] mongodb.MongoDBJdbcClient - >>>>>>>>>>>>>> ObjectId: 57922510a30cb208ef5ce5c0
+2016-07-22 15:52:16,699 DEBUG [main] mongodb.MongoDBJdbcClient - New document inserted successfully: wasAcknowledged=true, isUpdateOfExisting=false, getUpsertedId=null, hashcode=558187323
+2016-07-22 15:52:16,700 DEBUG [main] mongodb.MongoDBJdbcClient - Find all documents...
+2016-07-22 15:52:16,706 DEBUG [main] mongodb.MongoDBJdbcClient - Document 1:
+2016-07-22 15:52:16,707 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "56b4ca2b125d92371c1af077"} , "title" : "MongoDB" , "description" : "database" , "likes" : 100 , "url" : "http://www.tutorialspoint.com/mongodb/" , "by" : "tutorials point"}
+2016-07-22 15:52:16,708 DEBUG [main] mongodb.MongoDBJdbcClient - Document 2:
+2016-07-22 15:52:16,708 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578a857c6068070aa0824334"} , "title" : "MongoDB" , "description" : "database" , "likes" : 100 , "url" : "http://www.tutorialspoint.com/mongodb/" , "by" : "tutorials point"}
+2016-07-22 15:52:16,710 DEBUG [main] mongodb.MongoDBJdbcClient - Document 3:
+2016-07-22 15:52:16,710 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b18443f8e85184741f5c1"} , "title" : "MongoDB" , "description" : "database" , "likes" : 100 , "url" : "http://www.tutorialspoint.com/mongodb/" , "by" : "tutorials point"}
+2016-07-22 15:52:16,712 DEBUG [main] mongodb.MongoDBJdbcClient - Document 4:
+2016-07-22 15:52:16,714 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b6e9a3f8e852b6bab15fb"} , "version" : "1.0.1"}
+2016-07-22 15:52:16,716 DEBUG [main] mongodb.MongoDBJdbcClient - Document 5:
+2016-07-22 15:52:16,718 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b6ec63f8e852b7c4a7c18"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,720 DEBUG [main] mongodb.MongoDBJdbcClient - Document 6:
+2016-07-22 15:52:16,720 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b7c813f8e852e840f9bd4"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,721 DEBUG [main] mongodb.MongoDBJdbcClient - Document 7:
+2016-07-22 15:52:16,721 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578b7da03f8e852f00bd783b"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,722 DEBUG [main] mongodb.MongoDBJdbcClient - Document 8:
+2016-07-22 15:52:16,724 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bade53f8e853d75484263"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,725 DEBUG [main] mongodb.MongoDBJdbcClient - Document 9:
+2016-07-22 15:52:16,726 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bae133f8e853d891acdd7"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,727 DEBUG [main] mongodb.MongoDBJdbcClient - Document 10:
+2016-07-22 15:52:16,728 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578baeb73f8e853dce70d088"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,728 DEBUG [main] mongodb.MongoDBJdbcClient - Document 11:
+2016-07-22 15:52:16,729 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578baf433f8e853e0ad96610"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,730 DEBUG [main] mongodb.MongoDBJdbcClient - Document 12:
+2016-07-22 15:52:16,730 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb0543f8e853e8fbb5385"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,732 DEBUG [main] mongodb.MongoDBJdbcClient - Document 13:
+2016-07-22 15:52:16,732 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb1693f8e853f056eb11f"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,733 DEBUG [main] mongodb.MongoDBJdbcClient - Document 14:
+2016-07-22 15:52:16,734 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb2293f8e853f534b1761"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,735 DEBUG [main] mongodb.MongoDBJdbcClient - Document 15:
+2016-07-22 15:52:16,735 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb8363f8e8542f0f2f6db"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,736 DEBUG [main] mongodb.MongoDBJdbcClient - Document 16:
+2016-07-22 15:52:16,736 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578bb8713f8e85430963e0f1"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,737 DEBUG [main] mongodb.MongoDBJdbcClient - Document 17:
+2016-07-22 15:52:16,737 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "578cb33a3f8e855d3aba94c8"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,738 DEBUG [main] mongodb.MongoDBJdbcClient - Document 18:
+2016-07-22 15:52:16,738 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "579223b2a30cb208ca861d5a"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,739 DEBUG [main] mongodb.MongoDBJdbcClient - Document 19:
+2016-07-22 15:52:16,741 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "57922455a30cb208dc56dd84"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,742 DEBUG [main] mongodb.MongoDBJdbcClient - Document 20:
+2016-07-22 15:52:16,743 DEBUG [main] mongodb.MongoDBJdbcClient - { "_id" : { "$oid" : "57922510a30cb208ef5ce5c0"} , "by" : "Wolfram Welschinger" , "description" : "Java application" , "title" : "Wolfram's JDBC Client" , "version" : "1.1"}
+2016-07-22 15:52:16,752 DEBUG [main] mongodb.MongoDBJdbcClient - Connection closed.
