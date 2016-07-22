@@ -1,0 +1,20 @@
+# Steps do remove a folder from git
+# WW 2016-07-22
+
+Wolframs-MBP:x_mongodb_test wolfram$ git rm -r ./bin/
+rm 'bin/de/ww/mongodb/MongoDBJdbcClient.class'
+
+Wolframs-MBP:x_mongodb_test wolfram$ git commit -m "bin/* removed from git"
+[master 7c21cd2] bin/* removed from git
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 bin/de/ww/mongodb/MongoDBJdbcClient.class
+ 
+Wolframs-MBP:x_mongodb_test wolfram$ git push origin master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 240 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+To https://github.com/wolframwelschinger/mongodb-jdbc-client.git
+   b97da42..7c21cd2  master -> master
+Wolframs-MBP:x_mongodb_test wolfram$ 
