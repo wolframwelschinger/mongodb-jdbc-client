@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
+import org.bson.types.ObjectId;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -117,23 +118,28 @@ public class MongoDBJdbcClient {
 	/**
 	 * Adds an new Document
 	 * @param pattern HashMap<String, Object> with keys and values to add to the new document
-	 *  @return true, if the document(s) could be added
+	 *  @return ObjectID of the inserted document, otherwise null
 	 */
-	public boolean addNewDocument(HashMap pattern){
+	public ObjectId addNewDocument(HashMap pattern){
 		BasicDBObject newDoc = new BasicDBObject();
+		ObjectId id = null;
 		for (Object key : pattern.keySet()){
 			logger.debug("Criteria: Key=" + key + ", value=" + pattern.get(key));
 			newDoc.append( (String)key, pattern.get(key) );
 		}
 		
 		WriteResult result = this.coll.insert(newDoc);
+		id = newDoc.getObjectId("_id");
+		logger.info(">>>>>>>>>>>>>> ObjectId: " + id);		
+		
 		logger.debug("New document inserted successfully: " 
 				+ "wasAcknowledged=" + result.wasAcknowledged()
 				+ ", isUpdateOfExisting=" + result.isUpdateOfExisting()
 				+ ", getUpsertedId=" + result.getUpsertedId()
 				+ ", hashcode=" + result.hashCode()
 				);
-		return result.wasAcknowledged();
+		
+		return id;
 	}
 	
 	/**
@@ -193,11 +199,13 @@ public class MongoDBJdbcClient {
 			newDoc.put("description", "Java application");
 			newDoc.put("by", "Wolfram Welschinger");
 			newDoc.put("version", "1.1");
-			client.addNewDocument(newDoc);
+			ObjectId id = client.addNewDocument(newDoc);
+			System.out.println("ObjectId of inserted document; " + id);
 			
 			//Find all documents
 			client.findAllDocuments();
 
+			/*
 			//Find remove one and then find all documents
 			//client.removeDocument(new BasicDBObject().append("version", "1.0"));
 			//client.findAllDocuments();
@@ -207,6 +215,7 @@ public class MongoDBJdbcClient {
 					, new BasicDBObject().append("version", "1.0.1")
 					);
 			client.findAllDocuments();
+			*/
 			
 			/*
 			//db.getCollection("wwtest").update(queryDBObject, updateDBObject);
